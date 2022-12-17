@@ -5,16 +5,18 @@ import java.awt.event.ActionListener;
 import java.awt.print.PrinterException;
 import java.io.*;
 
-
-
 public class SimpleTextEditor implements ActionListener {
     //creating frame
     static JFrame frame;
 
     JTextArea textarea;//creating area for text
+    
     JMenuBar menubar;//creating menubar
+    
     JMenu File, Edit, Close;//creating menu's
+    
     JMenuItem New, Open, Save, Print;//creating item present in menu
+    
     JMenuItem Cut, Copy, Paste;
     JMenuItem CloseEditor;
 
@@ -22,15 +24,12 @@ public class SimpleTextEditor implements ActionListener {
     SimpleTextEditor() {
         //add name
         frame = new JFrame("Simple Text Editor");
-        frame.setLayout(null);
 
         // set boundaries of the frame
         frame.setBounds(0, 0, 500, 500);
 
-
         //add text
         textarea = new JTextArea("Welcome to the editor");
-        textarea.setBounds(0, 0, 1500, 720);
         //create object
         menubar = new JMenuBar();
         File = new JMenu("File");
