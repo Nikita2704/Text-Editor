@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.print.PrinterException;
 import java.io.*;
-import javax.swing.JScrollBar;
+
 
 
 public class SimpleTextEditor implements ActionListener {
@@ -17,7 +17,6 @@ public class SimpleTextEditor implements ActionListener {
     JMenuItem New, Open, Save, Print;//creating item present in menu
     JMenuItem Cut, Copy, Paste;
     JMenuItem CloseEditor;
-    JScrollPane scroll;
 
     // create a constructor
     SimpleTextEditor() {
@@ -67,11 +66,7 @@ public class SimpleTextEditor implements ActionListener {
         CloseEditor = new JMenuItem("Close");
         CloseEditor.addActionListener(this);
         Close.add(CloseEditor);
-        scroll = new JScrollPane(textarea);
-        scroll.setVerticalScrollBar(new JScrollBar());
-        //scroll.setBounds(480, 0, 20, 500);
-        frame.add(scroll);
-
+        
         frame.setJMenuBar(menubar);
 
         //added text to frame
